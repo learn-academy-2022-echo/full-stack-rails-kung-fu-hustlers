@@ -1,0 +1,12 @@
+<h1>Welcome to our Blog!</h1>
+<% @blogs.map do |value| %>
+<ul>
+    <li>
+    <%= link_to value.title, blog_path(value) %>
+    </li>
+</ul>
+<% end %>
+
+
+
+<%= link_to 'Add a new post', new_blog_path %>
