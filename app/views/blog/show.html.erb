@@ -1,3 +1,9 @@
 <h2><%=@blog.title %></h2>
 <%=@blog.content %>
+<br>
 <%= link_to 'Back To All Posts', blogs_path %>
+<br>
+<%= link_to 'Edit Post', edit_blog_path(@blog) %>
+<br>
+<%= button_to 'Delete Item', delete_blog_path(@blog), method: :delete, form:{data: { 'turbo-confirm': 'Are you sure?'} }%>
+
